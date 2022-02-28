@@ -86,7 +86,10 @@ public class User {
 
     public User() {
     }
-
+    public String idtoString ()
+    {
+        return String.valueOf(id);
+    }
     public int getId() {
         return id;
     }
@@ -115,6 +118,7 @@ public class User {
     public boolean isIs_verified() {
         return is_verified;
     }
+
     
     
     
