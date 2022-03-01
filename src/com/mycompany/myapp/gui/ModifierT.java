@@ -1,10 +1,10 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.myapp.gui;
 
+import static com.codename1.push.PushContent.setTitle;
 import com.codename1.ui.Button;
 import com.codename1.ui.Command;
 import com.codename1.ui.Dialog;
@@ -19,12 +19,11 @@ import com.mycompany.myapp.services.ServiceTask;
 
 /**
  *
- * @author bhk
+ * @author Taha
  */
-public class AddTaskForm extends Form{
-
-    public AddTaskForm(Form previous) {
-        setTitle("Add a new task");
+public class ModifierT extends Form{
+    public ModifierT(Form previous,Tournoi user1){
+        setTitle("Modify");        
         setLayout(BoxLayout.y());
         
         TextField Name = new TextField("","Name");
@@ -32,7 +31,6 @@ public class AddTaskForm extends Form{
         TextField cathegorie= new TextField("", "cath");
         TextField discription= new TextField("", "disc");
         Button btnValider = new Button("Add task");
-        
         btnValider.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
@@ -42,7 +40,12 @@ public class AddTaskForm extends Form{
                 {
                     try {
                         Tournoi t = new Tournoi(Name.getText().toString(),(Date.getText().toString()),cathegorie.getText().toString(),discription.getText().toString());
-                        if( ServiceTask.getInstance().addTask(t))
+                        t.setName(Name.getText().toString());
+                        t.setId(user1.getId());
+                        t.setCathegorie(cathegorie.getText().toString());
+                        t.setDateT(Date.getText().toString());
+                        t.setDiscription(discription.getText().toString());
+                        if( ServiceTask.getInstance().ModifyUser(t))
                         {
                            Dialog.show("Success","Connection accepted",new Command("OK"));
                         }else
@@ -61,6 +64,5 @@ public class AddTaskForm extends Form{
         getToolbar().addMaterialCommandToLeftBar("", FontImage.MATERIAL_ARROW_BACK, e-> previous.showBack());
                 
     }
-    
-    
-}
+    }
+

@@ -108,4 +108,44 @@ public class ServiceTask {
         NetworkManager.getInstance().addToQueueAndWait(req);
         return tasks;
     }
-}
+     public boolean ModifyUser(Tournoi t) {
+        System.out.println(t);
+       //String url = Statics.BASE_URL + "create?name=" + t.getName() + "&status=" + t.getStatus();
+       String url = Statics.BASE_URL + "updatemobile/";
+        req.setUrl(url);
+       System.out.println(url);
+       req.addArgument("id", t.getId()+"");
+       req.addArgument("nom", t.getName());
+       req.addArgument("date", t.getDateT());
+       req.addArgument("cathegorie", t.getCathegorie());
+       req.addArgument("discription", t.getDiscription());
+        System.out.println(Statics.BASE_URL + "updatemobile/");
+       req.addResponseListener(new ActionListener<NetworkEvent>() {
+            @Override
+            public void actionPerformed(NetworkEvent evt) {
+                resultOK = req.getResponseCode() == 200; //Code HTTP 200 OK
+                req.removeResponseListener(this);
+            }
+        });
+       NetworkManager.getInstance().addToQueueAndWait(req);
+        return resultOK;
+        }
+     public boolean DeleteT(Tournoi U) { 
+         System.out.println(U);
+        System.out.println("********");
+       //String url = Statics.BASE_URL + "create?name=" + t.getName() + "&status=" + t.getStatus();
+       String url = Statics.BASE_URL + "deleteT/";
+       System.out.println(url);
+       req.setUrl(url);
+       req.addArgument("id", U.getId()+"");
+       req.addResponseListener(new ActionListener<NetworkEvent>() {
+            @Override
+            public void actionPerformed(NetworkEvent evt) {
+                resultOK = req.getResponseCode() == 200; //Code HTTP 200 OK
+                req.removeResponseListener(this);
+            }
+        });
+        NetworkManager.getInstance().addToQueueAndWait(req);
+        return resultOK;
+    }}
+

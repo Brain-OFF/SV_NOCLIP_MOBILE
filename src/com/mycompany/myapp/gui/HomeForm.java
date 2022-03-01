@@ -9,6 +9,7 @@ import com.codename1.ui.Button;
 import com.codename1.ui.Form;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BoxLayout;
+import com.mycompany.myapp.entities.Tournoi;
 
 /**
  *
@@ -22,11 +23,12 @@ Form current;
         setLayout(BoxLayout.y());
         
         add(new Label("Choose an option"));
-        Button btnAddTask = new Button("Add Task");
-        Button btnListTasks = new Button("List Tasks");
-        
+        Button btnAddTask = new Button("Add Tournoi");
+        Button btnListTasks = new Button("List Tournoi");
+
         btnAddTask.addActionListener(e-> new AddTaskForm(current).show());
         btnListTasks.addActionListener(e-> new ListTasksForm(current).show());
+   
         addAll(btnAddTask,btnListTasks);
         
         
