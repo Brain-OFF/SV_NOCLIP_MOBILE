@@ -45,13 +45,31 @@ public class ServiceUser {
         System.out.println(U);
         System.out.println("********");
        //String url = Statics.BASE_URL + "create?name=" + t.getName() + "&status=" + t.getStatus();
-       String url = Statics.BASE_URL + "create";
-    
+       String url = Statics.BASE_URL + "addusermobile/";
+       System.out.println(url);
        req.setUrl(url);
-       
        req.addArgument("username", U.getUsername());
        req.addArgument("password", U.getPassword());
        req.addArgument("email", U.getEmail());
+       req.addResponseListener(new ActionListener<NetworkEvent>() {
+            @Override
+            public void actionPerformed(NetworkEvent evt) {
+                resultOK = req.getResponseCode() == 200; //Code HTTP 200 OK
+                req.removeResponseListener(this);
+            }
+        });
+        NetworkManager.getInstance().addToQueueAndWait(req);
+        return resultOK;
+    }
+    
+    public boolean deleteUser(User U) {
+        System.out.println(U);
+        System.out.println("********");
+       //String url = Statics.BASE_URL + "create?name=" + t.getName() + "&status=" + t.getStatus();
+       String url = Statics.BASE_URL + "delusermobile/"+U.getId();
+       System.out.println(url);
+       req.setUrl(url);
+       req.addArgument("id", U.idtoString());
        req.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
             public void actionPerformed(NetworkEvent evt) {
@@ -114,4 +132,44 @@ public class ServiceUser {
         NetworkManager.getInstance().addToQueueAndWait(req);
         return Users;
     }
+    public boolean ModifyUser(User U) {
+        System.out.println(U);
+        System.out.println("********");
+       //String url = Statics.BASE_URL + "create?name=" + t.getName() + "&status=" + t.getStatus();
+       String url = Statics.BASE_URL + "updateusermobile/";
+       System.out.println(url);
+       req.setUrl(url);
+       req.addArgument("id", U.getId()+"");
+       req.addArgument("username", U.getUsername());
+       req.addArgument("password", U.getPassword());
+       req.addArgument("email", U.getEmail());
+       req.addArgument("bio", U.getBio());
+       req.addArgument("points", U.getPoints()+"");
+       req.addResponseListener(new ActionListener<NetworkEvent>() {
+            @Override
+            public void actionPerformed(NetworkEvent evt) {
+                resultOK = req.getResponseCode() == 200; //Code HTTP 200 OK
+                req.removeResponseListener(this);
+            }
+        });
+       NetworkManager.getInstance().addToQueueAndWait(req);
+        return resultOK;
+        }
+    public boolean DeleteUser(User U) {
+        System.out.println(U);
+        System.out.println("********");
+       String url = Statics.BASE_URL + "deusersmobile/";
+       System.out.println(url);
+       req.setUrl(url);
+       req.addArgument("id", U.getId()+"");
+       req.addResponseListener(new ActionListener<NetworkEvent>() {
+            @Override
+            public void actionPerformed(NetworkEvent evt) {
+                resultOK = req.getResponseCode() == 200; //Code HTTP 200 OK
+                req.removeResponseListener(this);
+            }
+        });
+       NetworkManager.getInstance().addToQueueAndWait(req);
+        return resultOK;
+        }
 }

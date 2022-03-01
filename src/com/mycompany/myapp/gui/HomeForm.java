@@ -22,9 +22,8 @@ Form current;
         setLayout(BoxLayout.y());
         
         add(new Label("Choose an option"));
-        Button btnAddTask = new Button("Add Task");
-        Button btnListTasks = new Button("List Tasks");
-        
+        Button btnAddTask = new Button("Add User");
+        Button btnListTasks = new Button("List User");
         btnAddTask.addActionListener(e-> new AddUserForm(current).show());
         btnListTasks.addActionListener(e-> new ListUsersForm(current).show());
         addAll(btnAddTask,btnListTasks);
