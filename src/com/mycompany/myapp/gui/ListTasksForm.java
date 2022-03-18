@@ -16,6 +16,7 @@ import com.codename1.ui.Label;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BoxLayout;
+import com.mycompany.myapp.entities.InscriptionT;
 import com.mycompany.myapp.entities.Tournoi;
 import com.mycompany.myapp.services.ServiceTask;
 import java.util.*;
@@ -41,12 +42,16 @@ public class ListTasksForm extends Form {
         btnmail = new Label(u.getDateT());
         Button btnmodify=new Button("Modify");
         Button btdelete=new Button("Delete");
+         Button btaddins=new Button("inscription");
 
-        cnt.addAll(lbid,lbnom,lbbio,btnmail,btnmodify,btdelete);
+        cnt.addAll(lbid,lbnom,lbbio,btnmail,btaddins);
         Container cnt2=new Container(BoxLayout.x());
-        
         cnt2.addAll(cnt);
         btnmodify.addActionListener(e-> new ModifierT(current,u).show()); 
+        btaddins.addActionListener(e-> new Add_ins(current,u).show()); 
+
+        
+        
         btdelete.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) 
@@ -56,10 +61,16 @@ public class ListTasksForm extends Form {
                         {
                            Dialog.show("Success","Connection accepted",new Command("OK"));
                            ArrayList<Tournoi> list=ServiceTask.getInstance().getAllTasks();
+
+                          revalidate();
+                            
                            
                         }else
-                            Dialog.show("ERROR", "Server error", new Command("OK"));
-                    } catch (NumberFormatException e) {
+                        { Dialog.show("ERROR", "Server error", new Command("OK"));}
+                       
+                        
+                         } 
+                        catch (NumberFormatException e) {
                         Dialog.show("ERROR", "Status must be a number", new Command("OK"));
                     }
                     
@@ -71,7 +82,7 @@ public class ListTasksForm extends Form {
     return cnt2;
     }  
       public ListTasksForm(Form previous) {
-        setTitle("List tasks");
+        setTitle("List tournois");
         ArrayList<Tournoi> list=ServiceTask.getInstance().getAllTasks();
         SpanLabel sp = new SpanLabel();
         add(sp);

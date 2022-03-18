@@ -11,6 +11,7 @@ import com.codename1.io.JSONParser;
 import com.codename1.io.NetworkEvent;
 import com.codename1.io.NetworkManager;
 import com.codename1.ui.events.ActionListener;
+import com.mycompany.myapp.entities.InscriptionT;
 import com.mycompany.myapp.entities.Tournoi;
 import com.mycompany.myapp.utils.Statics;
 import java.io.IOException;
@@ -68,8 +69,7 @@ public class ServiceTask {
         try {
             tasks=new ArrayList<>();
             JSONParser j = new JSONParser();
-            Map<String,Object> tasksListJson = 
-               j.parseJSON(new CharArrayReader(jsonText.toCharArray()));
+            Map<String,Object> tasksListJson = j.parseJSON(new CharArrayReader(jsonText.toCharArray()));
             
             List<Map<String,Object>> list = (List<Map<String,Object>>)tasksListJson.get("root");
             for(Map<String,Object> obj : list){
@@ -147,5 +147,39 @@ public class ServiceTask {
         });
         NetworkManager.getInstance().addToQueueAndWait(req);
         return resultOK;
-    }}
+    }
+
+  public boolean addIns(InscriptionT t,Tournoi tt) {
+        System.out.println(t);
+        System.out.println("********");
+       //String url = Statics.BASE_URL + "create?name=" + t.getName() + "&status=" + t.getStatus();
+       String url = Statics.BASE_URL + "createIns";
+           req.addArgument("id", tt.getId()+"");
+       req.setUrl(url);
+        System.out.println(url);
+
+       req.addArgument("user_name", t.getUser_name());
+       req.addArgument("email", t.getEmail());
+       
+       if(t.isEtat()==true) {req.addArgument("etat","true");}
+       else if(t.isEtat()==false){req.addArgument("etat","false");}
+       
+       req.addArgument("Rank", t.getRank());
+       t.setTournoi(tt.getId());
+       req.addArgument("tournoi",t.getTournoi()+"");
+       req.addResponseListener(new ActionListener<NetworkEvent>() {
+            @Override
+            public void actionPerformed(NetworkEvent evt) {
+                resultOK = req.getResponseCode() == 200; //Code HTTP 200 OK
+                req.removeResponseListener(this);
+            }
+        });
+        NetworkManager.getInstance().addToQueueAndWait(req);
+        return resultOK;
+    }
+
+    
+
+
+}
 

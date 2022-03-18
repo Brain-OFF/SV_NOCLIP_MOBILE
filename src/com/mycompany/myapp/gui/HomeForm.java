@@ -23,13 +23,9 @@ Form current;
         setLayout(BoxLayout.y());
         
         add(new Label("Choose an option"));
-        Button btnAddTask = new Button("Add Tournoi");
         Button btnListTasks = new Button("List Tournoi");
-
-        btnAddTask.addActionListener(e-> new AddTaskForm(current).show());
         btnListTasks.addActionListener(e-> new ListTasksForm(current).show());
-   
-        addAll(btnAddTask,btnListTasks);
+        addAll(btnListTasks);
         
         
     }

@@ -6,11 +6,11 @@
         <group>
             <file>file:/C:/Users/Taha/Documents/NetBeansProjects/WorkshopOarsingJson/src/com/mycompany/myapp/MyApplication.java</file>
             <file>file:/C:/Users/Taha/Documents/NetBeansProjects/WorkshopOarsingJson/src/com/mycompany/myapp/gui/AddTaskForm.java</file>
+            <file>file:/C:/Users/Taha/Documents/NetBeansProjects/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ModifierT.java</file>
             <file>file:/C:/Users/Taha/Documents/NetBeansProjects/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ListTasksForm.java</file>
             <file>file:/C:/Users/Taha/Documents/NetBeansProjects/WorkshopOarsingJson/src/com/mycompany/myapp/gui/HomeForm.java</file>
             <file>file:/C:/Users/Taha/Documents/NetBeansProjects/WorkshopOarsingJson/src/com/mycompany/myapp/services/ServiceTask.java</file>
             <file>file:/C:/Users/Taha/Documents/NetBeansProjects/WorkshopOarsingJson/src/com/mycompany/myapp/entities/Tournoi.java</file>
-            <file>file:/C:/Users/Taha/Documents/NetBeansProjects/WorkshopOarsingJson/src/com/mycompany/myapp/utils/Statics.java</file>
         </group>
     </open-files>
 </project-private>
