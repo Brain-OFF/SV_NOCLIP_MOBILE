@@ -16,6 +16,7 @@ import com.codename1.ui.layouts.BoxLayout;
 import com.mycompany.myapp.entities.InscriptionT;
 import com.mycompany.myapp.services.ServiceTask;
 import com.codename1.ui.CheckBox;
+import com.codename1.ui.ComboBox;
 import com.codename1.ui.RadioButton;
 import com.codename1.ui.TextArea;
 import com.mycompany.myapp.entities.Tournoi;
@@ -34,20 +35,26 @@ public class Add_ins extends Form{
         TextField user_name = new TextField("","user name");
         TextField email= new TextField("", "email");
         RadioButton etat= new RadioButton("Accept all terms");
-        TextField Rank= new TextField("", "Rank");
-       
+         ComboBox Rank = new ComboBox();
+                    Rank.addItem("bronze");
+                    Rank.addItem("silver");
+                    Rank.addItem("gold");
+                    Rank.addItem("platinum");
+                    Rank.addItem("diamond");
+                    Rank.addItem("Master");
+                    Rank.addItem("grand");       
 
         Button btnValider = new Button("Add inscription");
         
         btnValider.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
-                if ((user_name.getText().length()==0)||(email.getText().length()==0)||(etat.animate())||(Rank.getText().length()==0))
+                if ((user_name.getText().length()==0)||(email.getText().length()==0)||(etat.animate()))
                     Dialog.show("Alert", "Please fill all the fields", new Command("OK"));
                 else
                 {
                     try {
-                        InscriptionT t = new InscriptionT(user_name.getText(),email.getText().toString(),etat.animate(),Rank.getText().toString());
+                        InscriptionT t = new InscriptionT(user_name.getText(),email.getText().toString(),etat.animate(),Rank.toString());
                         t.setTournoi(user1.getId());
                         if( !ServiceTask.getInstance().addIns(t,user1))
                             Dialog.show("ERROR", "Server error", new Command("OK"));else {
