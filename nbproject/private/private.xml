@@ -4,15 +4,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/WALID/Desktop/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/utils/Statics.java</file>
-            <file>file:/C:/Users/WALID/Desktop/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/theme.java</file>
-            <file>file:/C:/Users/WALID/Desktop/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ModifyUser.java</file>
-            <file>file:/C:/Users/WALID/Desktop/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/entities/User.java</file>
-            <file>file:/C:/Users/WALID/Desktop/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/AddUserForm.java</file>
-            <file>file:/C:/Users/WALID/Desktop/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/MyApplication.java</file>
-            <file>file:/C:/Users/WALID/Desktop/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/services/ServiceUser.java</file>
-            <file>file:/C:/Users/WALID/Desktop/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/HomeForm.java</file>
-            <file>file:/C:/Users/WALID/Desktop/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ListUsersForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ListUsersForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/LoginUserForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/HomeForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/entities/User.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/MyApplication.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/AddUserForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/services/ServiceUser.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ModifyUser.java</file>
         </group>
     </open-files>
 </project-private>

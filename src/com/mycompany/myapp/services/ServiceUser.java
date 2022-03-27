@@ -10,6 +10,7 @@ import com.codename1.io.ConnectionRequest;
 import com.codename1.io.JSONParser;
 import com.codename1.io.NetworkEvent;
 import com.codename1.io.NetworkManager;
+import com.codename1.ui.Dialog;
 import com.codename1.ui.events.ActionListener;
 import com.mycompany.myapp.entities.User;
 import com.mycompany.myapp.utils.Statics;
@@ -25,7 +26,7 @@ import java.util.Map;
 public class ServiceUser {
 
     public ArrayList<User> Users;
-    
+    public User CurrentUser;
     public static ServiceUser instance=null;
     public boolean resultOK;
     private ConnectionRequest req;
@@ -79,6 +80,85 @@ public class ServiceUser {
         });
         NetworkManager.getInstance().addToQueueAndWait(req);
         return resultOK;
+    }
+    
+     public User Login(User U) {
+         this.getAllUsers();
+        System.out.println(U);
+        
+        System.out.println("********");
+       //String url = Statics.BASE_URL + "create?name=" + t.getName() + "&status=" + t.getStatus();
+       String url = Statics.BASE_URL + "loginmobile/";
+       System.out.println(url);
+       req.setUrl(url);
+       req.addArgument("username", U.getUsername());
+       req.addArgument("password", U.getPassword());
+         User Us = null;
+        req.addResponseListener(new ActionListener<NetworkEvent>() {
+          
+            @Override
+            public void actionPerformed(NetworkEvent evt) {
+            String rep=new String(req.getResponseData());
+                System.out.println(rep);
+                if(rep.trim().equalsIgnoreCase("error"))
+                {
+                    Dialog.show("error", "login ou pwd invalid", "ok","cancel");
+                }
+                else
+                {
+                    ArrayList<User> Userss;
+                
+                Userss = parseUser1(new String(req.getResponseData()));
+                System.out.println("user :"+Userss);
+                req.removeResponseListener(this);
+                
+                 for(User u:Userss)
+                {
+                     CurrentUser=u;
+                }
+            
+                }
+            }
+
+            
+        });
+        
+        NetworkManager.getInstance().addToQueueAndWait(req);
+        return CurrentUser;
+    }
+    public ArrayList<User> parseUser1(String jsonText){
+        try {
+            Users=new ArrayList<>();
+            JSONParser j = new JSONParser();
+            Map<String,Object> tasksListJson = 
+               j.parseJSON(new CharArrayReader(jsonText.toCharArray()));
+            
+            List<Map<String,Object>> list = (List<Map<String,Object>>)tasksListJson.get("root");
+                User U = new User();
+              // int id = Integer.parseInt(obj.get("id").toString());
+                //U.setId((int)id);
+                U.setId(((int)Float.parseFloat(tasksListJson.get("id").toString())));
+                U.setUsername(tasksListJson.get("username").toString());
+                U.setEmail(tasksListJson.get("email").toString());
+                if (tasksListJson.get("Bio")==null)
+                     U.setBio("Null");
+               else
+                     U.setBio(tasksListJson.get("Bio").toString());
+                U.setPassword(tasksListJson.get("password").toString());
+                int points=(((int)Float.parseFloat(tasksListJson.get("points").toString())));
+                if (tasksListJson.get("points").toString()=="null")
+                    U.setPoints(0);
+                else
+                U.setPoints(((int)Float.parseFloat(tasksListJson.get("points").toString())));
+                Users.add(U);
+                return Users;
+            
+            
+            
+        } catch (IOException ex) {
+            
+        }
+        return Users;
     }
 
     public ArrayList<User> parseUsers(String jsonText){
@@ -143,7 +223,7 @@ public class ServiceUser {
        req.addArgument("username", U.getUsername());
        req.addArgument("password", U.getPassword());
        req.addArgument("email", U.getEmail());
-       req.addArgument("bio", U.getBio());
+       req.addArgument("Bio", U.getBio());
        req.addArgument("points", U.getPoints()+"");
        req.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override

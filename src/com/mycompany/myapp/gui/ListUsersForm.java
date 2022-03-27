@@ -70,6 +70,7 @@ Form current;
     }
     public ListUsersForm(Form previous) {
         setTitle("List Users");
+        setLayout(BoxLayout.y());
         Button btreload=new Button("Reload");
         ArrayList<User> list=ServiceUser.getInstance().getAllUsers();
         SpanLabel sp = new SpanLabel();

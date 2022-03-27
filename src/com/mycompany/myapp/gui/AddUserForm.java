@@ -24,14 +24,14 @@ import com.mycompany.myapp.services.ServiceUser;
 public class AddUserForm extends Form{
 
     public AddUserForm(Form previous) {
-        setTitle("Add a new task");
+        setTitle("Add a new User");
         setLayout(BoxLayout.y());
         
         TextField tfusername = new TextField("","Username");
         TextField tfemail = new TextField("","Email");
         TextField tfpassword = new TextField("","Password");
         TextField tfpassword2 = new TextField("","Confirm Password");
-
+tfpassword.setConstraint(TextField.PASSWORD);
         Button btnValider = new Button("Add task");
         
         btnValider.addActionListener(new ActionListener() {

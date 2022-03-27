@@ -9,6 +9,7 @@ import com.codename1.ui.Button;
 import com.codename1.ui.Form;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BoxLayout;
+import com.mycompany.myapp.entities.User;
 
 /**
  *
@@ -16,9 +17,11 @@ import com.codename1.ui.layouts.BoxLayout;
  */
 public class HomeForm extends Form{
 Form current;
-    public HomeForm() {
+    public HomeForm(User U) {
+        User Current_user;
         current=this; //Back 
-        setTitle("Home");
+        setTitle("Home User :"+U.getUsername());
+        System.out.println(U);
         setLayout(BoxLayout.y());
         
         add(new Label("Choose an option"));

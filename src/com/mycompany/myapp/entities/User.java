@@ -38,6 +38,10 @@ public class User {
         this.email = email;
         this.password = password;
     }
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
     
      public User(int points, String username, String email, String photo, String bio, boolean is_verified,String Pwd) {
         this.id = id;
