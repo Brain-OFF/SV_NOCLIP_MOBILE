@@ -26,10 +26,14 @@ Form current;
         
         add(new Label("Choose an option"));
         Button btnAddTask = new Button("Add User");
+        Button btnLogout = new Button("Logout");
         Button btnListTasks = new Button("List User");
         btnAddTask.addActionListener(e-> new AddUserForm(current).show());
         btnListTasks.addActionListener(e-> new ListUsersForm(current).show());
-        addAll(btnAddTask,btnListTasks);
+        btnLogout.addActionListener(e->{
+        new LoginUserForm().show();
+        } );
+        addAll(btnAddTask,btnListTasks,btnLogout);
         
         
     }

@@ -44,15 +44,15 @@ tfpassword.setConstraint(TextField.PASSWORD);
                         User U = new User(tfusername.getText().toString(), tfpassword.getText().toString());   
                         User Us=ServiceUser.getInstance().Login(U);
                         System.out.println("1"+Us);
-                        if(Us!=null)
+                        if(Us.getId()!=0)
                         {
                                                     System.out.println("2"+Us);
                            btnValider.addActionListener(e-> new HomeForm(Us).show());
                            
                         }else
-                            Dialog.show("ERROR", "Server error", new Command("OK"));
+                            Dialog.show("ERROR", "Invalid Credentials", new Command("OK"));
                     } catch (NumberFormatException e) {
-                        Dialog.show("ERROR", "Status must be a number", new Command("OK"));
+                        
                     }
                     
                     
