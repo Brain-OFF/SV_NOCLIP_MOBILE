@@ -33,6 +33,8 @@ public AddCoachForm(Form previous)  {
         TextField categorie = new TextField("","categorie");
 
         Button btnValider = new Button("Add task");
+
+
         
         btnValider.addActionListener(new ActionListener() {
             @Override

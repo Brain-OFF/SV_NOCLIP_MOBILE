@@ -6,10 +6,13 @@ package com.mycompany.myapp.gui;
 
 import com.codename1.components.SpanLabel;
 import com.codename1.ui.Button;
+import com.codename1.ui.Command;
 import com.codename1.ui.Container;
+import com.codename1.ui.Dialog;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
 import com.codename1.ui.Label;
+import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BoxLayout;
 import com.mycompany.myapp.entities.Coach;
@@ -35,21 +38,24 @@ public class ListCoachsForm extends Form{
         Label lbrank=new Label(u.getRank()+"");
         Button btdelete=new Button("Delete");
         Button btnmodify=new Button("Modify");
-        
-        cnt.addAll(lbid,lbnom,lblastname,lbcategorie,lbrank,btdelete,btnmodify);
+        Button btnR=new Button("Reserver");
+
+        cnt.addAll(lbid,lbnom,lblastname,lbcategorie,lbrank,btdelete,btnmodify,btnR);
         Container cnt2=new Container(BoxLayout.x());
         
         cnt2.addAll(cnt);
-    /* btnmodify.addActionListener(e-> new ModifyUser(current,u).show()); 
+     btnmodify.addActionListener(e-> new ModifyCoach(current,u).show()); 
+     btnR.addActionListener(e-> new AddReservation(current,u).show()); 
+
         btdelete.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) 
                 {
                     try {
-                        if( ServiceUser.getInstance().DeleteUser(u))
+                        if( ServiceTask.getInstance().deleteCoach(u))
                         {
                            Dialog.show("Success","Connection accepted",new Command("OK"));
-                           ArrayList<User> list=ServiceUser.getInstance().getAllUsers();
+                           ArrayList<Coach> list=ServiceTask.getInstance().getAllCoachs();
                            
                         }else
                             Dialog.show("ERROR", "Server error", new Command("OK"));
@@ -61,12 +67,12 @@ public class ListCoachsForm extends Form{
                 
                 
             }
-        );*/
+        );
     return cnt2;
     }
     public ListCoachsForm(Form previous) {
         setTitle("List Users");
-       
+       setLayout(BoxLayout.y());
         ArrayList<Coach> list=ServiceTask.getInstance().getAllCoachs();
         SpanLabel sp = new SpanLabel();
      

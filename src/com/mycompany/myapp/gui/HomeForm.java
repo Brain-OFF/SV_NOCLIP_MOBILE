@@ -20,17 +20,33 @@ Form current;
         current=this; //Back 
         setTitle("Home");
         setLayout(BoxLayout.y());
+
+
+
         
-        add(new Label("Choose an option"));
-        Button btnAddTask = new Button("Add Coach");
-        Button btnListTasks = new Button("List Coach");
+        current.add(new Label("Choose an option"));
+        Button btnAddCoach = new Button("Add Coach");
+        Button btnListCoach = new Button("List Coach");
         
-        btnAddTask.addActionListener(e-> new AddCoachForm(current).show());
-        btnListTasks.addActionListener(e-> new ListCoachsForm(current).show());
-        addAll(btnAddTask,btnListTasks);
+        btnAddCoach.addActionListener(e-> new AddCoachForm(current).show());
+        btnListCoach.addActionListener(e-> new ListCoachsForm(current).show());
+        Button btnListreservation = new Button("List reservation");
         
+        btnListreservation.addActionListener(e-> new ListReservationForm(current).show());
+        current.addAll(btnAddCoach,btnListCoach,btnListreservation);
+
+ 
+current.getToolbar().addCommandToSideMenu("coach", null, (e)->current.show() );
+
+       
+
+
+
+
+
         
     }
     
     
 }
+

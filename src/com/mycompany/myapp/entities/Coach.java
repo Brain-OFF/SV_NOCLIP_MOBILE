@@ -70,13 +70,4 @@ public class Coach {
         this.categorie = categorie;
     }
 
-
-
-
-
-
-
-
-
-
 }
