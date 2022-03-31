@@ -49,6 +49,7 @@ public class ListTB extends Form {
 
         Button btnmodify=new Button("Modify");
         Button btdelete=new Button("Delete");
+         Button btaddins=new Button("inscription");
 
 
          btdelete.getAllStyles().setBorder(Border.createEmpty());
@@ -60,10 +61,11 @@ public class ListTB extends Form {
         
 
         
-        cnt.addAll(lbid,lbnom,lbbio,btnmail,btdelete,btcath,btnmodify);
+        cnt.addAll(lbid,lbnom,lbbio,btnmail,btdelete,btcath,btnmodify,btaddins);
         Container cnt2=new Container(BoxLayout.x());
         cnt2.addAll(cnt);
         btnmodify.addActionListener(e-> new ModifierT(current,u).show()); 
+        btaddins.addActionListener(e-> new Add_ins(current,u).show()); 
 
 
         

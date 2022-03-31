@@ -50,8 +50,9 @@ public class ModifierT extends Form{
 
         TextField discription= new TextField("", "disc");
         Button btnValider = new Button("modifier");
-       
-        
+        Name.setText(user1.getName());
+        Date.setText(user1.getDateT());
+        discription.setText(user1.getDiscription());
         btnValider.getAllStyles().setBorder(Border.createEmpty());
         btnValider.getAllStyles().setTextDecoration(Style.TEXT_DECORATION_UNDERLINE);
         Validator val = new Validator();

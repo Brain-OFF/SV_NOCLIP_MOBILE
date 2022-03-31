@@ -35,7 +35,7 @@ public class ModifierI  extends Form{
         setLayout(BoxLayout.y());
                 TableLayout tl = new TableLayout(3, 2);
 
-        TextField Name = new TextField("","user name");
+        TextField Name = new TextField("","user name");;
         TextField email= new TextField("", "email");
  RadioButton etat= new RadioButton("Accept all terms");
          ComboBox Rank = new ComboBox();
@@ -46,9 +46,9 @@ public class ModifierI  extends Form{
                     Rank.addItem("diamond");
                     Rank.addItem("Master");
                     Rank.addItem("grand");       
-
+Name.setText(text);
                     
-                    
+      email.setText(text);
                    
         Button btnValider = new Button("Add inscription");
           btnValider.getAllStyles().setBorder(Border.createEmpty());

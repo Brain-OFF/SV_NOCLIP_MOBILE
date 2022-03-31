@@ -42,7 +42,7 @@ public class ListST extends Form {
 
         Label btnmail=new Label("            Cathegorie:    "+u.getCathegorie());
 
-         Label btcath = new Label("date:   ",u.getDateT());
+         Label btcath = new Label("date:   "+u.getDateT());
 
         Button btnmodify=new Button("Modify");
         Button btdelete=new Button("Delete");

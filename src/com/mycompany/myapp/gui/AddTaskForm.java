@@ -19,6 +19,7 @@ import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.plaf.Border;
 import com.codename1.ui.plaf.Style;
+import com.codename1.ui.spinner.DateTimeSpinner;
 import com.codename1.ui.table.TableLayout;
 import com.codename1.ui.validation.LengthConstraint;
 import com.codename1.ui.validation.Validator;
@@ -38,7 +39,7 @@ public class AddTaskForm extends Form{
         setLayout(BoxLayout.y());
         
         TextField Name = new TextField("","Name");
-        TextField Date= new TextField("", "date");
+        DateTimeSpinner Date= new DateTimeSpinner();
         ComboBox cathegorie=new ComboBox();
                     cathegorie.addItem("RPG");
                     cathegorie.addItem("MMORPG");
@@ -65,12 +66,12 @@ val.addConstraint(Date, new LengthConstraint(6));
         btnValider.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
-                if ((Name.getText().length()==0)||(Date.getText().length()==0)||(discription.getText().length()==0))
+                if ((Name.getText().length()==0)||(discription.getText().length()==0))
                     Dialog.show("Alert", "Please fill all the fields", new Command("OK"));
                 else
                 {
                     try {
-                        Tournoi t = new Tournoi(Name.getText().toString(),(Date.getText().toString()),cathegorie.getSelectedItem().toString(),discription.getText().toString());
+                        Tournoi t = new Tournoi(Name.getText().toString(),Date.getTextSelectionSupport().toString(),cathegorie.getSelectedItem().toString(),discription.getText().toString());
                         if( ServiceTask.getInstance().addTask(t))
                         {
                            Dialog.show("Success",t.getCathegorie(),new Command("OK"));
@@ -87,7 +88,7 @@ val.addConstraint(Date, new LengthConstraint(6));
         });
         
 add(new FloatingHint(Name));
-add(new FloatingHint(Date));
+add(Date);
 add( new FloatingHint(discription));
 add(cathegorie);
 
