@@ -16,7 +16,7 @@ import com.codename1.ui.Label;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BoxLayout;
-import com.mycompany.myapp.entities.Task;
+import com.mycompany.myapp.entities.News;
 import com.mycompany.myapp.services.ServiceTask;
 import java.util.ArrayList;
 
@@ -25,7 +25,7 @@ import java.util.ArrayList;
  *
  * @author bhk
  */
-public class ListTasksForm extends Form {
+public class ListnewsForm extends Form {
 //ArrayList<Task> data = new ArrayList<>();
 //    private ListTasksForm current;
     Form current;
@@ -49,7 +49,7 @@ public class ListTasksForm extends Form {
 //    return cnt2;
 //    }
    
-    public  Container  addItem(Task u)
+    public  Container  addItem(News u)
     {
         current=this;
           Container cnt=new Container(BoxLayout.y());
@@ -77,7 +77,7 @@ public class ListTasksForm extends Form {
                         if( ServiceTask.getInstance().deleteNews(u))
                         {
                            Dialog.show("Success","Connection accepted",new Command("OK"));
-                           ArrayList<Task> list=ServiceTask.getInstance().getAllTask();
+                           ArrayList<News> list=ServiceTask.getInstance().getAllTask();
                            
                         }else
                             Dialog.show("ERROR", "Server error", new Command("OK"));
@@ -93,7 +93,7 @@ public class ListTasksForm extends Form {
     return cnt2;
     }
 
-    public ListTasksForm(Form previous) {
+    public ListnewsForm(Form previous) {
         setTitle("List tasks");
 
         SpanLabel sp = new SpanLabel();

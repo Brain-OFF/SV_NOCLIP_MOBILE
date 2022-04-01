@@ -11,13 +11,13 @@ import java.util.Date;
  *
  * @author bhk
  */
-public class Task {
+public class News {
     private int id;
     private String Text,jeux,titre;
     private String categorie;
     private String date;
 
-    public Task(String Text, String jeux, String titre, String categorie, String date) {
+    public News(String Text, String jeux, String titre, String categorie, String date) {
         this.Text = Text;
         this.jeux = jeux;
         this.titre = titre;
@@ -25,7 +25,7 @@ public class Task {
         this.date = date;
     }
 
-    public Task() {
+    public News() {
     }
 
     
@@ -54,7 +54,7 @@ public class Task {
         this.date = date;
     }
 
-    public Task(int id) {
+    public News(int id) {
         this.id = id;
     }
 

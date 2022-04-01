@@ -9,7 +9,7 @@ import com.codename1.ui.Button;
 import com.codename1.ui.Form;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BoxLayout;
-import com.mycompany.myapp.entities.Task;
+import com.mycompany.myapp.entities.News;
 
 /**
  *
@@ -33,8 +33,8 @@ Form current;
           Button btnmdfcategorie = new Button("update categorie");
         
         
-        btnAddTask.addActionListener(e-> new AddTaskForm(current).show());
-        btnListTasks.addActionListener(e-> new ListTasksForm(current).show());
+        btnAddTask.addActionListener(e-> new AddnewsForm(current).show());
+        btnListTasks.addActionListener(e-> new ListnewsForm(current).show());
          btncategorie.addActionListener(e-> new  categorieForm(current).show());
            btnmodifierTasks.addActionListener(e-> new  modifiernewsForm(current).show());
             btnmdfcategorie.addActionListener(e-> new  modifiercategorieForm(current).show());

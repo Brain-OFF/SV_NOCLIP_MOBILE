@@ -294,7 +294,7 @@ import com.codename1.io.NetworkManager;
 import com.codename1.ui.events.ActionListener;
 
 
-import com.mycompany.myapp.entities.Task;
+import com.mycompany.myapp.entities.News;
 import com.mycompany.myapp.entities.categorie;
 import com.mycompany.myapp.utils.Statics;
 import java.io.IOException;
@@ -308,7 +308,7 @@ import java.util.Map;
  * @author Raef
  */
 public class ServiceTask {
-    public ArrayList<Task> types;
+    public ArrayList<News> types;
     
     public static ServiceTask instance=null;
     public boolean resultOK;
@@ -327,7 +327,7 @@ public class ServiceTask {
     
     
    
-    public ArrayList<Task> parseTypes(String jsonText){
+    public ArrayList<News> parseTypes(String jsonText){
         try {
             types =new ArrayList<>();
             JSONParser j = new JSONParser();
@@ -336,7 +336,7 @@ public class ServiceTask {
             List<Map<String,Object>> list = (List<Map<String,Object>>)tasksListJson.get("root");
             
             for(Map<String,Object> obj : list){
-               Task p = new Task();
+               News p = new News();
                 
               int id_et=(int) Float.parseFloat(obj.get("id").toString());
 
@@ -361,7 +361,7 @@ public class ServiceTask {
     }
      
      
-     public ArrayList<Task> getAllTask(){
+     public ArrayList<News> getAllTask(){
        
          
          String url = Statics.BASE_URL+"news/listnewsmobile";      
@@ -382,7 +382,7 @@ public class ServiceTask {
     }
     
      
-     public boolean deleteNews(Task p) {
+     public boolean deleteNews(News p) {
         String url = Statics.BASE_URL + "News/deleteMobiled/" + p.getId();
                
         req.setUrl(url);
@@ -398,7 +398,7 @@ public class ServiceTask {
     }
      
      
-        public boolean addnews(Task p) {
+        public boolean addnews(News p) {
             String url = Statics.BASE_URL + "news/add_jason/?Text=" +p.getText()+ "&Titre=" +p.getTitre()+ "&Jeux=" +p.getJeux()+ "&Date=" +p.getDate();
        
       req.setUrl(url);
@@ -440,7 +440,7 @@ public class ServiceTask {
 //    }
            
            
-           public boolean ModifyCoach(Task t) {
+           public boolean ModifyCoach(News t) {
         System.out.println(t);
        //String url = Statics.BASE_URL + "create?name=" + t.getName() + "&status=" + t.getStatus();
        String url = Statics.BASE_URL + "updatemobile/";

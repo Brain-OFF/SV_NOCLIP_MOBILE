@@ -11,7 +11,7 @@ import com.codename1.io.JSONParser;
 import com.codename1.io.NetworkEvent;
 import com.codename1.io.NetworkManager;
 import com.codename1.ui.events.ActionListener;
-import com.mycompany.myapp.entities.Task;
+import com.mycompany.myapp.entities.News;
 
 import com.mycompany.myapp.entities.categorie;
 import com.mycompany.myapp.utils.Statics;

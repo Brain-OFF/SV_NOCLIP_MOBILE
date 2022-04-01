@@ -15,7 +15,7 @@ import com.codename1.ui.TextField;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BoxLayout;
-import com.mycompany.myapp.entities.Task;
+import com.mycompany.myapp.entities.News;
 import com.mycompany.myapp.services.ServiceTask;
 
 /**
@@ -29,7 +29,7 @@ public class modifiernewsForm extends Form {
         Quelque soit l'interface faisant appel à AddTask, on peut y revenir
         en utilisant le bouton back
         */
-         Task g = null;
+         News g = null;
         setTitle("Add a new game");
         setLayout(BoxLayout.y());
          TextField Text = new TextField("","Text");
@@ -51,7 +51,7 @@ public class modifiernewsForm extends Form {
                 else
                 {
                     try {
-                         Task t = new Task(Text.getText(), Titre.getText()  , Jeux.getText(),Date.getText(),Categorie.getText());
+                         News t = new News(Text.getText(), Titre.getText()  , Jeux.getText(),Date.getText(),Categorie.getText());
                         t.setId(g.getId());
                         if( ServiceTask.getInstance().ModifyCoach(t))
                             Dialog.show("Success","Connection accepted",new Command("OK"));

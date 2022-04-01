@@ -14,16 +14,16 @@ import com.codename1.ui.TextField;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BoxLayout;
-import com.mycompany.myapp.entities.Task;
+import com.mycompany.myapp.entities.News;
 import com.mycompany.myapp.services.ServiceTask;
 
 /**
  *
  * @author bhk
  */
-public class AddTaskForm extends Form{
+public class AddnewsForm extends Form{
 
-    public AddTaskForm(Form previous) {
+    public AddnewsForm(Form previous) {
         setTitle("Add a news");
         setLayout(BoxLayout.y());
         
@@ -44,7 +44,7 @@ public class AddTaskForm extends Form{
                 else
                 {
                     try {
-                        Task t = new Task( tftext.getText().toString() , tfTjeu.getText().toString(), tftitre.getText().toString(),tfcategorie.getText().toString(), tfdate.getText().toString());
+                        News t = new News( tftext.getText().toString() , tfTjeu.getText().toString(), tftitre.getText().toString(),tfcategorie.getText().toString(), tfdate.getText().toString());
                         if( ServiceTask.getInstance().addnews(t))
                         {
                            Dialog.show("Success","Connection accepted",new Command("OK"));

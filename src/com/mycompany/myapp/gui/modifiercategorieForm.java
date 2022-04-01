@@ -14,7 +14,7 @@ import com.codename1.ui.TextField;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BoxLayout;
-import com.mycompany.myapp.entities.Task;
+import com.mycompany.myapp.entities.News;
 import com.mycompany.myapp.entities.categorie;
 import com.mycompany.myapp.services.ServiceTask;
 import com.mycompany.myapp.services.categorieliste;
