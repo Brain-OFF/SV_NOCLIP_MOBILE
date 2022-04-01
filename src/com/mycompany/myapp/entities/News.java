@@ -1,0 +1,96 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.mycompany.myapp.entities;
+
+import java.util.Date;
+
+/**
+ *
+ * @author bhk
+ */
+public class News {
+    private int id;
+    private String Text,jeux,titre;
+    private String categorie;
+    private String date;
+
+    public News(String Text, String jeux, String titre, String categorie, String date) {
+        this.Text = Text;
+        this.jeux = jeux;
+        this.titre = titre;
+        this.categorie = categorie;
+        this.date = date;
+    }
+
+    public News() {
+    }
+
+    
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setText(String Text) {
+        this.Text = Text;
+    }
+
+    public void setJeux(String jeux) {
+        this.jeux = jeux;
+    }
+
+    public void setTitre(String titre) {
+        this.titre = titre;
+    }
+
+    public void setCategorie(String categorie) {
+        this.categorie = categorie;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public News(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getText() {
+        return Text;
+    }
+
+    public String getJeux() {
+        return jeux;
+    }
+
+    public String getTitre() {
+        return titre;
+    }
+
+    public String getCategorie() {
+        return categorie;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    @Override
+    public String toString() {
+        return "News{" + "id=" + id + ", Text=" + Text + ", jeux=" + jeux + ", titre=" + titre + ", categorie=" + categorie + ", date=" + date + '}';
+    }
+
+   
+
+   
+  
+    
+    
+}

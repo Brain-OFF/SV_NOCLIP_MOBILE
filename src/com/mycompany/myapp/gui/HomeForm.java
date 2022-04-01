@@ -32,15 +32,19 @@ Form current;
         add(new Label("Choose an option"));
         Button BtnTournois = new Button("Tournois");
         Button BtnCoaching = new Button("Coaching");
+        Button BtnGames = new Button("Games");
         Button BtnUser = new Button("Users");
+        Button btnNews=new Button("News");
         
         BtnTournois.addActionListener(e-> new TournamentMenuForm(current,U).show());
         BtnCoaching.addActionListener(e-> new CoachMenuForm(current,U).show());
+        btnNews.addActionListener(e-> new NewsMenuForm(current,U).show());
         BtnUser.addActionListener(e-> new UserMenuForm(current,U).show());
+        BtnGames.addActionListener(e-> new GamesMenuForm(current,U).show());
         if (U.getStatus().compareTo("admin")==0)    
-        addAll(BtnTournois,BtnCoaching,BtnUser);
+        addAll(BtnTournois,BtnCoaching,BtnUser,BtnGames,btnNews);
         else
-            addAll(BtnTournois,BtnCoaching);
+            addAll(BtnTournois,BtnCoaching,BtnGames);
         
         
     }
