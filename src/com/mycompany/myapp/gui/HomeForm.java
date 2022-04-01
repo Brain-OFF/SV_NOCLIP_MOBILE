@@ -23,23 +23,26 @@ Form current;
 
 
 
-        
+              
+
         current.add(new Label("Choose an option"));
         Button btnAddCoach = new Button("Add Coach");
         Button btnListCoach = new Button("List Coach");
-        
+        Button btnstat = new Button("stat Coach");
+     
+           btnstat.addActionListener(e-> new chart().createPieChartForm().show());
+
         btnAddCoach.addActionListener(e-> new AddCoachForm(current).show());
         btnListCoach.addActionListener(e-> new ListCoachsForm(current).show());
         Button btnListreservation = new Button("List reservation");
         
         btnListreservation.addActionListener(e-> new ListReservationForm(current).show());
-        current.addAll(btnAddCoach,btnListCoach,btnListreservation);
+        current.addAll(btnAddCoach,btnListCoach,btnListreservation,btnstat);
 
  
 current.getToolbar().addCommandToSideMenu("coach", null, (e)->current.show() );
 
-       
-
+ 
 
 
 
