@@ -16,6 +16,7 @@ import com.codename1.ui.Label;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BoxLayout;
+import com.mycompany.myapp.entities.Cart;
 import com.mycompany.myapp.entities.Gamescat;
 import com.mycompany.myapp.entities.User;
 import com.mycompany.myapp.services.ServiceGamescat;
@@ -29,8 +30,10 @@ import java.util.ArrayList;
  */
 public class Listcat extends Form{
     User Cu;
-    public Listcat(Form previous,User U) {
+    Cart Panier;
+    public Listcat(Form previous,User U,Cart P) {
         Cu=U;
+        Panier=P;
         setTitle("Games Categories");
         SpanLabel sp = new SpanLabel();
         ArrayList<Gamescat> list=ServiceGamescat.getInstance().getAllGamescat();
@@ -62,7 +65,7 @@ public class Listcat extends Form{
         cnt2.addAll(cnt);
         
         btaddgame.addActionListener(e-> new Addgames(current,u).show());
-        btviewgame.addActionListener(e-> new Listgamescat(current,u,Cu).show());
+        btviewgame.addActionListener(e-> new Listgamescat(current,u,Cu,Panier).show());
         btdelete.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) 

@@ -10,6 +10,7 @@ import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BoxLayout;
+import com.mycompany.myapp.entities.Cart;
 import com.mycompany.myapp.entities.User;
 
 /**
@@ -18,7 +19,7 @@ import com.mycompany.myapp.entities.User;
  */
 public class GamesMenuForm extends Form{
 Form current;
-    public GamesMenuForm(Form previous,User U) {
+    public GamesMenuForm(Form previous,User U,Cart Panier) {
         
         User Current_user=U;
         current=this; //Back 
@@ -33,7 +34,7 @@ Form current;
          Button btnfavs = new Button("List Favs");
         btnAddcat.addActionListener(e -> new Addgamescat(current).show());
         btnListgame.addActionListener(e -> new Listgames(current,U).show());
-        btnListcat.addActionListener(e -> new Listcat(current,U).show());
+        btnListcat.addActionListener(e -> new Listcat(current,U,Panier).show());
         btnfavs.addActionListener(e -> new ListgamesFav(current,U).show());
         if (U.getStatus().compareTo("admin")==0)
         addAll(btnAddcat,btnListgame,btnListcat,btnfavs);

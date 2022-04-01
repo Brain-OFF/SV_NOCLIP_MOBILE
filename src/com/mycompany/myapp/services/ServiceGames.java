@@ -200,4 +200,39 @@ public boolean ModifyGames(Games U) {
        NetworkManager.getInstance().addToQueueAndWait(req);
         return resultOK;
         }
+public boolean AddPanierProduit(Games p) {
+        String url = Statics.BASE_URL + "/panier/add_jason/" + p.getId();
+               
+        req.setUrl(url);
+        req.addResponseListener(new ActionListener<NetworkEvent>() {
+            @Override
+            public void actionPerformed(NetworkEvent evt) {
+                resultOK = req.getResponseCode() == 200; //Code HTTP 200 OK
+                req.removeResponseListener(this);
+            }
+        });
+        NetworkManager.getInstance().addToQueueAndWait(req);
+        return resultOK;
+    }
+ 
+         public ArrayList<Games> getProduitsPanierMobile(){
+       
+         
+         String url = Statics.BASE_URL+"/panierf_jason";      
+        req.setUrl(url);
+        req.setPost(false);
+        
+   
+        req.addResponseListener(new ActionListener<NetworkEvent>() {
+            @Override
+            public void actionPerformed(NetworkEvent evt) {
+                Games = parseGames(new String(req.getResponseData()));
+            
+                req.removeResponseListener(this);
+            }
+        });
+        NetworkManager.getInstance().addToQueueAndWait(req);
+      
+        return Games;
+    }
 }
