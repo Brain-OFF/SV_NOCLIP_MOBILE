@@ -18,22 +18,30 @@ import com.mycompany.myapp.entities.User;
 public class HomeForm extends Form{
 Form current;
     public HomeForm(User U) {
-        User Current_user;
+        Form f1 = new Form("page 1", BoxLayout.y());
+        getToolbar().addCommandToSideMenu("Logout", null,(e)-> new LoginUserForm().show());
+        getToolbar().addCommandToSideMenu("Edit User Info", null,(e)-> new ModifyUser(current,U).show());
+        show();
+        f1.getToolbar().addCommandToRightBar("back", null, (e)->show());
+        User Current_user=U;
         current=this; //Back 
         setTitle("Home User :"+U.getUsername());
         System.out.println(U);
         setLayout(BoxLayout.y());
         
         add(new Label("Choose an option"));
-        Button btnAddTask = new Button("Add User");
-        Button btnLogout = new Button("Logout");
-        Button btnListTasks = new Button("List User");
-        btnAddTask.addActionListener(e-> new AddUserForm(current).show());
-        btnListTasks.addActionListener(e-> new ListUsersForm(current).show());
-        btnLogout.addActionListener(e->{
-        new LoginUserForm().show();
-        } );
-        addAll(btnAddTask,btnListTasks,btnLogout);
+        Button BtnTournois = new Button("Tournois");
+        Button BtnCoaching = new Button("Coaching");
+        Button BtnUser = new Button("Users");
+
+        Button btnListreservation = new Button("List reservation");
+        
+        btnListreservation.addActionListener(e-> new ListReservationForm(current).show());
+
+        if (U.getStatus()=="Admin")    
+        addAll(BtnTournois,BtnCoaching,BtnUser);
+        else
+            addAll(BtnTournois,BtnCoaching);
         
         
     }

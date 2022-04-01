@@ -11,7 +11,15 @@ package com.mycompany.myapp.entities;
  */
 public class User {
     private int id,points;
-    private String username,email,photo,bio,password;
+    private String username,email,photo,bio,password,status;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     public void setPassword(String password) {
         this.password = password;

@@ -83,7 +83,7 @@ public class ServiceUser {
     }
     
      public User Login(User U) {
-         this.getAllUsers();
+        getAllUsers();
         System.out.println(U);
         
         System.out.println("********");
@@ -150,6 +150,7 @@ public class ServiceUser {
                     U.setPoints(0);
                 else
                 U.setPoints(((int)Float.parseFloat(tasksListJson.get("points").toString())));
+                U.setStatus(tasksListJson.get("Status").toString());
                 Users.add(U);
                 return Users;
             
@@ -186,6 +187,7 @@ public class ServiceUser {
                   //  U.setPoints(0);
                 //else
                 U.setPoints(((int)Float.parseFloat(obj.get("points").toString())));
+                U.setStatus(obj.get("Status").toString());
                 Users.add(U);
             }
             
@@ -198,6 +200,7 @@ public class ServiceUser {
     
     public ArrayList<User> getAllUsers(){
         //String url = Statics.BASE_URL+"/tasks/";
+        req=new ConnectionRequest();
         String url = Statics.BASE_URL+"getusersmobile/";
         System.out.println(url);
         req.setUrl(url);
