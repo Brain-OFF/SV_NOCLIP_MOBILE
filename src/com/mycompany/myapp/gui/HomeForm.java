@@ -33,12 +33,11 @@ Form current;
         Button BtnTournois = new Button("Tournois");
         Button BtnCoaching = new Button("Coaching");
         Button BtnUser = new Button("Users");
-
-        Button btnListreservation = new Button("List reservation");
         
-        btnListreservation.addActionListener(e-> new ListReservationForm(current).show());
-
-        if (U.getStatus()=="Admin")    
+        BtnTournois.addActionListener(e-> new TournamentMenuForm(current,U).show());
+        BtnCoaching.addActionListener(e-> new CoachMenuForm(current,U).show());
+        BtnUser.addActionListener(e-> new UserMenuForm(current,U).show());
+        if (U.getStatus().compareTo("admin")==0)    
         addAll(BtnTournois,BtnCoaching,BtnUser);
         else
             addAll(BtnTournois,BtnCoaching);

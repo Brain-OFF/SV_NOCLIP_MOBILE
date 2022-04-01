@@ -33,7 +33,7 @@ Form current;
         Button btnListCoach = new Button("List Coach");
         
         Button btnstat = new Button("stat Coach");
-        btnstat.addActionListener(e-> new chart().createPieChartForm().show());
+        btnstat.addActionListener(e-> new chart().createPieChartForm(current).show());
 
         btnAddCoach.addActionListener(e-> new AddCoachForm(current).show());
         btnListCoach.addActionListener(e-> new ListCoachsForm(current,Current_user).show());
@@ -42,7 +42,7 @@ Form current;
         
         btnListreservation.addActionListener(e-> new ListReservationForm(current).show());
      
-        if (U.getStatus()=="Admin")
+        if (U.getStatus().compareTo("admin")==0)  
             addAll(btnAddCoach,btnListCoach,btnstat,btnListreservation);
         else
             addAll(btnListreservation);

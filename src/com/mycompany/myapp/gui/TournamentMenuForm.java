@@ -39,7 +39,7 @@ Form current;
         Button btrie=new Button("TRi Tournoi par date");
         btrie.addActionListener(e-> new Tritournoi(current).show());
         btS.addActionListener(e-> new Search(current).show());
-        if (U.getStatus()=="Admin")
+        if (U.getStatus().compareTo("admin")==0)  
         addAll(btnListTasks,btnaddT,btnaddTb,btnaddins,btS,btrie);
         else
             addAll(btnListTasks,btS,btrie);

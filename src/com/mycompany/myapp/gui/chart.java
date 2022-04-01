@@ -10,6 +10,7 @@ import com.codename1.charts.renderers.DefaultRenderer;
 import com.codename1.charts.renderers.SimpleSeriesRenderer;
 import com.codename1.charts.util.ColorUtil;
 import com.codename1.charts.views.PieChart;
+import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
 import com.codename1.ui.layouts.BorderLayout;
 import com.mycompany.myapp.entities.Coach;
@@ -59,7 +60,7 @@ protected CategorySeries buildCategoryDataset(String title,ArrayList<Coach> list
     return series;
 }
 
-public Form createPieChartForm() {
+public Form createPieChartForm(Form previous) {
     // Generate the values
 ArrayList<Coach> list=ServiceCoach.getInstance().getAllCoachs();
 
@@ -82,12 +83,14 @@ ArrayList<Coach> list=ServiceCoach.getInstance().getAllCoachs();
     PieChart chart = new PieChart(buildCategoryDataset("coach name",list), renderer);
 
     // Wrap the chart in a Component so we can add it to a form
-    ChartComponent c = new ChartComponent(chart);
+    
 
     // Create a form and show it.
     Form f = new Form("coach reservation", new BorderLayout());
+    ChartComponent c = new ChartComponent(chart);
+    f.getToolbar().addMaterialCommandToLeftBar("", FontImage.MATERIAL_ARROW_BACK, e -> previous.showBack());
     f.add(BorderLayout.CENTER, c);
-
+    
     return f;
 
 }

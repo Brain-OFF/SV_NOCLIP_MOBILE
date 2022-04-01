@@ -64,7 +64,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", points=" + points + ", username=" + username + ", email=" + email + ", photo=" + photo + ", bio=" + bio + ", is_verified=" + is_verified + ", Password= "+password+ '}';
+        return "User{" + "id=" + id + ", points=" + points + ", username=" + username + ", email=" + email + ", photo=" + photo + ", bio=" + bio + ", is_verified=" + is_verified + ", Password= "+password+", Status="+status+ '}';
     }
 
     public void setId(int id) {
