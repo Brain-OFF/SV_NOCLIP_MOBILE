@@ -53,7 +53,7 @@ public class ServiceTask {
         System.out.println(t);
         System.out.println("********");
        //String url = Statics.BASE_URL + "create?name=" + t.getName() + "&status=" + t.getStatus();
-       String url = Statics.BASE_URL + "createT/";
+       String url = Statics.BASE_URL + "createT1";
     
        req.setUrl(url);
        
@@ -141,7 +141,7 @@ public class ServiceTask {
          System.out.println(U);
         System.out.println("********");
        //String url = Statics.BASE_URL + "create?name=" + t.getName() + "&status=" + t.getStatus();
-       String url = Statics.BASE_URL + "deleteT/";
+       String url = Statics.BASE_URL + "deletetour/";
        System.out.println(url);
        req.setUrl(url);
        req.addArgument("id", U.getId()+"");

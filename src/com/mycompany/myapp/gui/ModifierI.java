@@ -65,7 +65,7 @@ val.addConstraint(email, RegexConstraint.validEmail());
                         t.setUser_name(Name.getText().toString());
                         t.setId(user1.getId());
                         t.setEmail(email.getText().toString());
-                        t.setRank(Rank.toString());
+                        t.setRank(Rank.getSelectedItem().toString());
                         if( ServiceTask.getInstance().ModifyIns(t))
                         {
                            Dialog.show("Success","Connection accepted",new Command("OK"));

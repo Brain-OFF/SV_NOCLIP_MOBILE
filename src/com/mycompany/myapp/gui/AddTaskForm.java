@@ -50,11 +50,8 @@ public class AddTaskForm extends Form{
         
         btnValider.getAllStyles().setBorder(Border.createEmpty());
         btnValider.getAllStyles().setTextDecoration(Style.TEXT_DECORATION_UNDERLINE);
-        Validator val = new Validator();
         
-val.addConstraint(Name, new LengthConstraint(3));
-val.addConstraint(discription, new LengthConstraint(15));
-val.addConstraint(Date, new LengthConstraint(6));
+
 
 
 
@@ -66,7 +63,10 @@ val.addConstraint(Date, new LengthConstraint(6));
                 else
                 {
                     try {
-                        Tournoi t = new Tournoi(Name.getText().toString(),Date.getTextSelectionSupport().toString(),cathegorie.getSelectedItem().toString(),discription.getText().toString());
+                                                System.out.println(Date.getStartDate().toString());
+
+                        Tournoi t = new Tournoi(Name.getText().toString(),Date.getStartDate().toString(),cathegorie.getSelectedItem().toString(),discription.getText().toString());
+                        System.out.println(t);
                         if( ServiceTask.getInstance().addTask(t))
                         {
                            Dialog.show("Success",t.getCathegorie(),new Command("OK"));

@@ -67,7 +67,7 @@ val.addConstraint(email, RegexConstraint.validEmail());
         btnValider.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
-                if ((user_name.getText().length()==0)||(email.getText().length()==0)||(!etat.animate()))
+                if ((user_name.getText().length()==0)||(email.getText().length()==0)||(etat.animate()))
                     Dialog.show("Alert", "Please fill all the fields", new Command("OK"));
                 else
                 {

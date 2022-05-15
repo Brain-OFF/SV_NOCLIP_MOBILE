@@ -7,37 +7,65 @@
             <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/entities/Tournoi.java</file>
             <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ListReservationForm.java</file>
             <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/HomeForm.java</file>
-            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/entities/User.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/Addgamescat.java</file>
             <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ModifierI.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/entities/News.java</file>
             <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/AddCoachForm.java</file>
             <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/UserMenuForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/services/ServiceGamescat.java</file>
             <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/chart.java</file>
-            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/TournamentMenuForm.java</file>
-            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/AddReservation.java</file>
-            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ListCoachsForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/entities/Commande.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/services/ServiceNews.java</file>
             <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/MyApplication.java</file>
-            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/Tritournoi.java</file>
-            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/AddUserForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ListgamesFav.java</file>
             <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ModifierT.java</file>
             <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/entities/reservation.java</file>
             <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/Add_ins.java</file>
-            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/AddTaskForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/GamesMenuForm.java</file>
             <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ListST.java</file>
-            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ModifyReservation.java</file>
-            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/Listins.java</file>
-            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ModifyCoach.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/services/categorieliste.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ListCommande.java</file>
             <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ListTasksForm.java</file>
-            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/CoachMenuForm.java</file>
-            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ModifyUser.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/modifiercategorieForm.java</file>
             <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/entities/InscriptionT.java</file>
-            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/services/ServiceTask.java</file>
-            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/entities/Coach.java</file>
             <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ListUsersForm.java</file>
-            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/LoginUserForm.java</file>
             <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/utils/Statics.java</file>
             <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/services/ServiceCoach.java</file>
-            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/services/ServiceUser.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/Listcat.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/CommandeMenuForm.java</file>
             <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/Search.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/Listgamescat.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/entities/User.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ListnewsForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/NewsMenuForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/AjouterCommande.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/TournamentMenuForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/AddnewsForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/AddReservation.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ListCoachsForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/modifiernewsForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/entities/Gamescat.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/Tritournoi.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/AddUserForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/AddTaskForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ModifyReservation.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/services/CommandeService.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/Listins.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ModifyCoach.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ListPanier.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/entities/Cart.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/CoachMenuForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ModifyUser.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/services/ServiceTask.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/entities/Coach.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/modifygames.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/categorieForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/entities/categorie.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/LoginUserForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/listecategorieForm.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/Listgames.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/services/ServiceGames.java</file>
+            <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/services/ServiceUser.java</file>
             <file>file:/C:/Users/WALID/Desktop/Files%202/WorkshopOarsingJson%20(1)/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ListTB.java</file>
         </group>
     </open-files>
