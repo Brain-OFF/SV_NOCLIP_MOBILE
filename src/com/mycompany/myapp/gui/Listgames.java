@@ -71,7 +71,7 @@ public class Listgames extends Form{
                         if( ServiceGames.getInstance().deletegames(u))
                         {
                            Dialog.show("Success","Connection accepted",new Command("OK"));
-                           ArrayList<Games> list=ServiceGames.getInstance().getAllGames();
+                         //  ArrayList<Games> list=ServiceGames.getInstance().getAllGames();
                            
                         }else
                             Dialog.show("ERROR", "Server error", new Command("OK"));

@@ -46,12 +46,14 @@ public class ServiceUser {
         System.out.println(U);
         System.out.println("********");
        //String url = Statics.BASE_URL + "create?name=" + t.getName() + "&status=" + t.getStatus();
-       String url = Statics.BASE_URL + "addusermobile/";
-       System.out.println(url);
+       String url = Statics.BASE_URL + "addusermobile";
+       
        req.setUrl(url);
        req.addArgument("username", U.getUsername());
        req.addArgument("password", U.getPassword());
        req.addArgument("email", U.getEmail());
+       req.setTimeout(15000);
+       System.out.println(req.getUrl().toString());
        req.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
             public void actionPerformed(NetworkEvent evt) {

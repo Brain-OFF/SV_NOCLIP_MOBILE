@@ -38,7 +38,7 @@ tfpassword.setConstraint(TextField.PASSWORD);
             @Override
             public void actionPerformed(ActionEvent evt) {
                 if ((tfusername.getText().length()==0)|| (tfemail.getText().length()==0) || (tfpassword.getText().length()==0) || (tfpassword2.getText().length()==0) &&
-                        !(tfpassword.getText().toString()!=tfpassword2.getText().toString()))
+                        (tfpassword.getText().toString()!=tfpassword2.getText().toString()))
                     Dialog.show("Alert", "Please fill all the fields", new Command("OK"));
                 else
                 {

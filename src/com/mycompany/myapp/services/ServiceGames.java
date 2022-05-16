@@ -97,7 +97,7 @@ public class ServiceGames {
         System.out.println(U);
         System.out.println("********");
        //String url = Statics.BASE_URL + "create?name=" + t.getName() + "&status=" + t.getStatus();
-       String url = Statics.BASE_URL + "removegames/"+U.getId();
+       String url = Statics.BASE_URL + "removegamesmob/"+U.getId();
        System.out.println(url);
        req.setUrl(url);
        req.addArgument("id", U.getId()+"");

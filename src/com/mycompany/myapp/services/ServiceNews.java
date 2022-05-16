@@ -400,7 +400,7 @@ public class ServiceNews {
      
      
         public boolean addnews(News p) {
-            String url = Statics.BASE_URL + "news/add_jason?Text=" +p.getText()+ "&Titre=" +p.getTitre()+ "&Jeux=" +p.getJeux()+ "&Date=" +p.getDate();
+            String url = Statics.BASE_URL + "news/add_jason?Text=" +p.getText()+ "&Titre=" +p.getTitre()+ "&jeu=" +p.getJeux()+ "&Date=" +p.getDate()+"&cat="+p.getCategorie();
        
       req.setUrl(url);
         req.addResponseListener(new ActionListener<NetworkEvent>() {
